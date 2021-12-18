@@ -146,31 +146,75 @@
       </div>
     </section>
     <section class="reviews">
-      <h2 class="reviews__title">Отзывы о нас</h2>
-      <div class="reviews__list">
-        <blockquote class="reviews__item">
-          <img class="reviews__author--image" src="img/picture-travis-mobile@1x.png" alt="Фото Трэвиса Баркера" width="50" height="33">  
-          <div class="reviews__author--info">
-            <cite class="reviews__author--info">Трэвис Баркер</cite>
-            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
-          </div>
-        </blockquote>
-        <blockquote class="reviews__item">
-          <img class="reviews__author--image" src="img/picture-travis-mobile@1x.png" alt="Фото Джона Смита" width="50" height="33">  
-          <div class="reviews__author--info">
-            <cite class="reviews__author--info">Джон Смит</cite>
-            <p class="reviews__text">Отличную стрижку мне сделали ребята!</p>
-          </div>
-        </blockquote>
-        <blockquote class="reviews__item">
-          <img class="reviews__author--image" src="img/picture-travis-mobile@1x.png" alt="Фото Ивана Бородайло" width="50" height="33">  
-          <div class="reviews__author--info">
-            <cite class="reviews__author--info">Иван Бородайло</cite>В Бородинском ваша борода в надежных руках!</p>
-          </div>
-        </blockquote>
+      <div class="reviews__wrapper slider">
+        <h2 class="reviews__title">Отзывы о нас</h2>
+        <a class="reviews__write button" href="form.html">Оставить свой</a>
+        <div class="reviews__list slider__list">
+          <blockquote class="reviews__item">
+            <img class="reviews__author--image" src="img/picture-travis-mobile@1x.png" alt="Фото Трэвиса Баркера"
+              width="50" height="33">
+            <div class="reviews__author--info">
+              <cite class="reviews__author--info">Трэвис Баркер</cite>
+              <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно
+                новую татуировку!</p>
+            </div>
+          </blockquote>
+          <blockquote class="reviews__item">
+            <img class="reviews__author--image" src="img/picture-travis-mobile@1x.png" alt="Фото Джона Смита" width="50"
+              height="33">
+            <div class="reviews__author--info">
+              <cite class="reviews__author--info">Джон Смит</cite>
+              <p class="reviews__text">Отличную стрижку мне сделали ребята!</p>
+            </div>
+          </blockquote>
+          <blockquote class="reviews__item">
+            <img class="reviews__author--image" src="img/picture-travis-mobile@1x.png" alt="Фото Ивана Бородайло"
+              width="50" height="33">
+            <div class="reviews__author--info">
+              <cite class="reviews__author--name">Иван Бородайло</cite>
+              <p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
+            </div>
+          </blockquote>
+          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__next" type="button">Следующий отзыв</button>
+        </div>
+        <p class="reviews__toggles slider__toggles">
+          <button class="slider__toggle slider__toggle--current" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
       </div>
     </section>
   </main>
+  <footer class="page-footer">
+    <div class="page-footer__contacts contacts">
+      <b class="contacts__title">Барбершоп "Бородинский"</b>
+      <p class="contacts__text">
+        г. Санкт-Петербург, ул. Большая Конюшенная 19/8 <br>
+        <a class="contacts__text" href="tel:+78125556666">
+          <span class="contacts__phone-mobile">Тел.:</span>+78125556666
+        </a>
+      </p>
+    </div>
+    <div class="page-footer__social social">
+      <b class="social__title">Давай дружить</b>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/e.korolev83">Мы Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://vk.com/e.korolev83">Мы в Facebook</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="https://vk.com/e.korolev83">Мы в instagram</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text"></b>
+      <a class="copyright__link" href="#">HTML Academy</a>
+    </div>
+  </footer>
 </body>
 
 </html>
