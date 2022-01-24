@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Barbershop Borodinsky</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,81 +15,86 @@
     <a href="#" class="page-header__logo">
       <img src="img/logotype-mobile.svg" alt="Barbershop Borodinsky" width="226" height="30">
     </a>
-    <nav class="main-nav">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a href="#">Main</a>
-        </li>
-        <li class="site-list__item">
-          <a href="photo.html">Portfolio</a>
-        </li>
-        <li class="site-list__item">
-          <a href="form.html">Form</a>
-        </li>
-        <li class="site-list__item">
-          <a href="contacts.html">Contacts</a>
-        </li>
-        <li class="site-list__item">
-          <a href="htmlacademy.com">HTML ACADEMY</a>
-        </li>
-      </ul>
-      <ul class="main-nav__list user-list">
-        <li class="user-list__item">
-          <a class="user-list__login js-login" href="login.html">Enter</a>
-        </li>
-      </ul>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Main</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Portfolio</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Form</a>
+          </li>
+          <li class="site-list__item">
+            <a href="contacts.html">Contacts</a>
+          </li>
+          <li class="site-list__item">
+            <a href="htmlacademy.com">HTML ACADEMY</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__login js-login" href="login.html">Enter</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Барбершоп "Бородинский" - истинно мужская классика!</h1>
     <section class="stats">
-      <header class="stats__header">
-        <h2 class="visually-hidden">Статистика Барбершопа</h2>
-        <p class="stats__slogan">Стрижка у нас - это выгодно!</p>
-        <p class="stats__intro">Мужская стрижка требует<br> точного подхода. Обратимся <br> к стятистике:</p>
-        <p class="stats__legends stats__legends--top">
-          <small>*- приведенные данные - ложь</small>
+      <div class="stats__wrapper">
+        <header class="stats__header">
+          <h2 class="visually-hidden">Статистика Барбершопа</h2>
+          <p class="stats__slogan">Стрижка у нас - это выгодно!</p>
+          <p class="stats__intro">Мужская стрижка требует<br> точного подхода. Обратимся <br> к стятистике:</p>
+          <p class="stats__legends stats__legends--top">
+            <small>*- приведенные данные - ложь</small>
+          </p>
+        </header>
+        <dl class="stats__list">
+          <div class="stats__item">
+            <dt class="stats__number">
+              1500<sup>*</sup>
+            </dt>
+            <dd class="stats__description">
+              рублей <br> вложений
+            </dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__number">
+              7200
+            </dt>
+            <dd class="stats__description">
+              секунд<br> времени мастера
+            </dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__number">
+              90000
+            </dt>
+            <dd class="stats__description">
+              постриженных<br> волос
+            </dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__number">
+              500000<sup>*</sup>
+            </dt>
+            <dd class="stats__description">
+              лайков и <br> комплиментов
+            </dd>
+          </div>
+        </dl>
+        <p class="stats__legen stats__legend--top">
+          <small class="stats__legend stats__legend--bottom">
+            *-приведенные данные - ложь
+          </small>
         </p>
-      </header>
-      <dl class="stats__list">
-        <div class="stats__item">
-          <dt class="stats__number">
-            1500<sup>*</sup>
-          </dt>
-          <dd class="stats__description">
-            рублей <br> вложений
-          </dd>
-        </div>
-        <div class="stats__item">
-          <dt class="stats__number">
-            7200
-          </dt>
-          <dd class="stats__description">
-            секунд<br> времени мастера
-          </dd>
-        </div>
-        <div class="stats__item">
-          <dt class="stats__number">
-            90000
-          </dt>
-          <dd class="stats__description">
-            постриженных<br> волос
-          </dd>
-        </div>
-        <div class="stats__item">
-          <dt class="stats__number">
-            500000<sup>*</sup>
-          </dt>
-          <dd class="stats__description">
-            лайков и <br> комплиментов
-          </dd>
-        </div>
-      </dl>
-      <p class="stats__legen stats__legend--top">
-        <small class="stats__legend stats__legend--button">
-          *-приведенные данные - ложь
-        </small>
-      </p>
+      </div>
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Наши преимущества</h2>
