@@ -101,7 +101,6 @@ img {
   height: 85px;
   text-align: center;
 
-  outline: 5px solid rgba(255, 0, 0, 0.8);
   outline-offset: -5px;
 
 }
@@ -210,6 +209,10 @@ img {
   width:auto;
   min-height: 51px;
   background-color: #826550;
+
+  @media (min-width: $tablet-width) {
+    background-color: #000000;
+  }
 }
 
 .main-nav__toggle {
@@ -227,6 +230,10 @@ img {
   &:hover,
   &:active {
     background-color: #624530;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -314,6 +321,7 @@ img {
 .main-nav--nojs .site-list__item {
   display: block;
   background-color: #6a4d38;
+
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -373,18 +381,60 @@ img {
 
 .site-list {
   font-weight: bold;
-}
 
-@media (min-width: $tablet-width) {
-  .site-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     width: 570px;
   }
-}
-@media (min-width: $desktop-width) {
-  .site-list {
+
+  @media (min-width: $desktop-width) {
     width: 780px;
   }
 }
+
+.site-list__item {
+  @media (min-width: $tablet-width) {
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: #826550;
+
+    }
+    }
+  }
+}
+
+.site-list__item a[href] {
+  @media (min-width: $tablet-width) {
+    &:hover{
+      color: #826550;
+
+      background-color: #000000;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #000000;
+      opacity: 0.3;
+    }
+  }
+}
+
 
 .site-list a {
   position: relative;
@@ -398,13 +448,20 @@ img {
   text-decoration: none;
   background-color: #826550;
   border-top: 1px solid #886e5b;
-  border-bottom: 1px solid #71543f
+  border-bottom: 1px solid #71543f;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 25px;
+    padding-bottom:23px;
+    background: none;
+    border: none;
+  }
 }
 
 //@import("blocks/user-list.scss");
 
 .user-list {
-
   @media (min-width: $tablet-width) {
       width: 60px;
   }
@@ -421,7 +478,6 @@ img {
 }
 
 .user-list__login-icon {
-  outline: 1px solid green;
   position: absolute;
   top: 17px;
   left: 21px;
