@@ -87,8 +87,8 @@ img {
   background-color: #242424;
   color: #ffffff;
 
-  outline: 5px solid rgba(0, 0, 255, 0.8);
-  outline-offset: -5px;
+  // outline: 5px solid rgba(0, 0, 255, 0.8);
+  // outline-offset: -5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -197,8 +197,7 @@ img {
 }
 
 .stats__list {
-  // outline: 5px solid rgba(0, 255, 0, 0.5);
-  // outline-offset: -5px;
+
 
   margin: 0;
 }
@@ -246,9 +245,6 @@ img {
   height: 2px;
   background-color: #ffffff;
   box-shadow: 0 8px 0 0 rgba(255, 255, 255, 1), 0 16px 0 0 rgba(255, 255, 255, 1);
-  // @media (max-width: $mobile-width-only) {    
-  //     display: none;    
-  // }
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
@@ -355,6 +351,7 @@ img {
 }
 
 .main-nav__list {
+  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -405,16 +402,16 @@ img {
     &--active {
       position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 3px;
-      background: #826550;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: #826550;
 
-    }
+      }
     }
   }
 }
@@ -431,6 +428,19 @@ img {
       color: #ffffff;
       background-color: #000000;
       opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+      opacity: 1;
     }
   }
 }
@@ -461,11 +471,6 @@ img {
 
 //@import("blocks/user-list.scss");
 
-.user-list {
-  @media (min-width: $tablet-width) {
-      width: 60px;
-  }
-}
 
 .user-list__login {
   position: relative;
@@ -475,6 +480,70 @@ img {
   line-height: 18px;
   color: #ffffff;
   text-decoration: none;
+
+  @media (max-width: $tablet-width) {
+    width: 60px;
+    height: 70px;
+    padding: 0;
+    
+    span {
+      position: absolute;
+      opacity: 0;
+    }
+
+    &:hover .user-list__login-icon {
+      opacity: 1;
+
+      polygon {
+        fill: #826550;
+      }
+    }
+    &:active .user-list__login-icon {
+      opacity: 0.3;
+
+      polygon {
+        fill: #ffffff;
+      }
+    }
+  }
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 23px;
+    padding-left: 50px;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: #000000;
+      background-color:#ffffff;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+
+      background-color: #ffffff;
+      opacity: 1;
+    }
+    &:hover .user-list__login-icon {
+      opacity: 0.3;
+
+      polygon {
+        fill: #000000;
+      }
+    }
+    &:active .user-list__login-icon {
+      opacity: 0.1;
+    }
+  }
 }
 
 .user-list__login-icon {
